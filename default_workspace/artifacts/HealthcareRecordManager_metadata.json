@@ -1,0 +1,254 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "patient",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "viewer",
+						"type": "address"
+					}
+				],
+				"name": "AccessGranted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "patient",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "viewer",
+						"type": "address"
+					}
+				],
+				"name": "AccessRevoked",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "patient",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "recordIndex",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "by",
+						"type": "address"
+					}
+				],
+				"name": "RecordAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_doc",
+						"type": "address"
+					}
+				],
+				"name": "addDoctor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_patient",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_dataHash",
+						"type": "string"
+					}
+				],
+				"name": "addRecord",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "doctors",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_patient",
+						"type": "address"
+					}
+				],
+				"name": "getRecords",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "timestamp",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "dataHash",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "addedBy",
+								"type": "address"
+							}
+						],
+						"internalType": "struct HealthcareRecordManager.Record[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_viewer",
+						"type": "address"
+					}
+				],
+				"name": "grantAccess",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_doc",
+						"type": "address"
+					}
+				],
+				"name": "removeDoctor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_viewer",
+						"type": "address"
+					}
+				],
+				"name": "revokeAccess",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "HealthcareRecordManager",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Manages patient records with doctor-only access control and audit logging.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"HealthcareRecordManager.sol": "HealthcareRecordManager"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"HealthcareRecordManager.sol": {
+			"keccak256": "0x86ba8af84b99e909eb48ea7142de004fcaa0aabc54153396a6f25a60a0d4448b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0655520c0bca15e6f3537edb3f03e4cd7daebd7ccf0b0d9bfdfb4cdf93314adb",
+				"dweb:/ipfs/QmWD1kEQ9GHQ6wvv3fNf5NTbSKncr6aJf6vKRkunQapGWT"
+			]
+		}
+	},
+	"version": 1
+}
