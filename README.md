@@ -15,7 +15,7 @@ Patients can grant or revoke access to their records for specific viewer address
 
 The contract emits audit events whenever records are added or access rights change.
 
-Records can only be viewed by the patient, authorized viewers, or any doctor.
+Records can only be viewed by the patient, authorized viewers, or a doctor.
 
 This ensures data privacy, traceability, and controlled access in a decentralized healthcare application.
 
